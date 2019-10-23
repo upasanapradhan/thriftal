@@ -1,6 +1,14 @@
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
+var mongoose=require('mongoose');
+
+mongoose.connect ('mongodb://localhost/thriftal')
+.then(()=>{
+  console.log('here......')
+})
+
+
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
