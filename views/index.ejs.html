@@ -77,7 +77,9 @@
                 <li><a href="#home-section" class="nav-link">Home</a></li>
                 <li><a href="#products-section" class="nav-link">Products</a></li>
                 <li><a href="#about-section" class="nav-link">About Us</a></li>
-               
+                <!-- <li><a href="#special-section" class="nav-link">Special</a></li>
+                <li><a href="#testimonials-section" class="nav-link">Testimonials</a></li>
+                <li><a href="#blog-section" class="nav-link">Blog</a></li> -->
                 <li><a href="#contact-section" class="nav-link">Contact</a></li>
               </ul>
             </nav>
@@ -104,7 +106,7 @@
                 <h1>Get Thrifty.</h1>
                 <p class="mb-5 lead">Earn money by selling us your old clothes.Buy branded clothes in low prices.Rent clothes for your speacial occasions.</p>
                 <div>
-                  <a href="/adddetails" class="btn btn-white btn-outline-white py-3 px-5 rounded-0 mb-lg-0 mb-2 d-block d-sm-inline-block">Sell.</a>
+                  <a href="#" class="btn btn-white btn-outline-white py-3 px-5 rounded-0 mb-lg-0 mb-2 d-block d-sm-inline-block">Sell.</a>
                   <a href="#" class="btn btn-white py-3 px-5 rounded-0 d-block d-sm-inline-block">Rent Clothes.</a>
                 </div>
               </div>
@@ -127,19 +129,32 @@
         </div>
         <div class="row">
           
+        <!-----  <% for (x in productdetails) {%>
 
+            <div class="w3-container w3-card w3-white">
+              <div class="w3-container">
+                <h3 class="w3-opacity"><b><%= x.name %></b></h3>
+                <a href='#'> view details
+                </a>
+                  
+                
+                <hr>
+                </div>
+              </div>
+      
+                       <% } %>  ----->
 
           <% for (x in productdetails) {%>
 
             <div class="col-lg-4 col-md-6 mb-5">
               <div class="product-item">
                 <figure>
-                  <img src="<%= productdetails[x].image %>" alt="Image" class="img-fluid">
+                  <img src="images/model_3_bg.jpg" alt="Image" class="img-fluid">
                 </figure>
                 <div class="px-4">
-                  <h3><%= productdetails[x].name %></h3>
+                  <h3 ><%=productdetails[x].name %></h3>
                   <div>  
-                    <a href="/viewdetails/<%= productdetails[x]._id %>" class="btn btn-black mr-1 rounded-0">View Details</a>
+                    <a href='/viewdetails/<%= productdetails._id %>' class="btn btn-black mr-1 rounded-0">View Details</a>
                     <!-- <a href="#" class="btn btn-black btn-outline-black ml-1 rounded-0">View</a> -->
                   </div>
                 </div>
